@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RJNetworking-Swift_Example' do
+  pod 'RJNetworking-Swift', :path => '../'
+
+  target 'RJNetworking-Swift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
