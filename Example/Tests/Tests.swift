@@ -1,5 +1,4 @@
 import XCTest
-import RJNetworking-Swift
 
 class Tests: XCTestCase {
     

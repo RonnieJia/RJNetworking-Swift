@@ -29,9 +29,9 @@
 
 /* Begin PBXFileReference section */
 		0DBB0DA5D2E6A8CFDEA5BC17 /* Pods-RJNetworking-Swift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJNetworking-Swift_Tests.debug.xcconfig"; path = "Target Support Files/Pods-RJNetworking-Swift_Tests/Pods-RJNetworking-Swift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4624371F8B920028FFCF26FA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4624371F8B920028FFCF26FA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		4885AC838AAC6191DB6EA74E /* Pods-RJNetworking-Swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJNetworking-Swift_Example.debug.xcconfig"; path = "Target Support Files/Pods-RJNetworking-Swift_Example/Pods-RJNetworking-Swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		5D2DD5A5B15ECCB2E709B081 /* RJNetworking-Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = "RJNetworking-Swift.podspec"; path = "../RJNetworking-Swift.podspec"; sourceTree = "<group>"; };
+		5D2DD5A5B15ECCB2E709B081 /* RJNetworking-Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "RJNetworking-Swift.podspec"; path = "../RJNetworking-Swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* RJNetworking-Swift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RJNetworking-Swift_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6E41C4078AF960D4AFB68B1B /* Pods_RJNetworking_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RJNetworking_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		877EC78F9D05A16E927C703E /* Pods_RJNetworking_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RJNetworking_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3D52426860A83D627154DE2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A3D52426860A83D627154DE2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A4184CE1E244C37BEED619DF /* Pods-RJNetworking-Swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJNetworking-Swift_Tests.release.xcconfig"; path = "Target Support Files/Pods-RJNetworking-Swift_Tests/Pods-RJNetworking-Swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F987BD5F36237617E0511DF0 /* Pods-RJNetworking-Swift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJNetworking-Swift_Example.release.xcconfig"; path = "Target Support Files/Pods-RJNetworking-Swift_Example/Pods-RJNetworking-Swift_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,7 +77,6 @@
 				0DBB0DA5D2E6A8CFDEA5BC17 /* Pods-RJNetworking-Swift_Tests.debug.xcconfig */,
 				A4184CE1E244C37BEED619DF /* Pods-RJNetworking-Swift_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -269,11 +269,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RJNetworking-Swift_Example/Pods-RJNetworking-Swift_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RJNetworking-Swift/RJNetworking_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RJNetworking_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

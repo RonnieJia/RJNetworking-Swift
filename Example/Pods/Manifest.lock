@@ -1,0 +1,27 @@
+PODS:
+  - Alamofire (4.9.1)
+  - RJNetworking-Swift (0.1.0):
+    - Alamofire
+    - SwiftyJSON
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - RJNetworking-Swift (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  RJNetworking-Swift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  RJNetworking-Swift: c552143a5c43582c8751f61bad7a4c8e83867517
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 969e8afac619c994428c37560c63d3582181cdc5
+
+COCOAPODS: 1.9.0.beta.2
