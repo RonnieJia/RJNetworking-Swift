@@ -30,7 +30,10 @@ public final class RJNetworking {
     
     public var kBaseUrl: String?
     
+    public var codeKey: String = "code"
     public var successCode: Int = 200
+    public var messageKey: String = "msg"
+    public var responseKey: String?
     
     var reachAble: Bool = true
     
@@ -75,19 +78,23 @@ public final class RJNetworking {
             kBaseUrl = RJNetworking.KDEFAULT_BASEURL
         }
         let requestUrlString: String = kBaseUrl?.appending(path) ?? path
-        Alamofire.request(requestUrlString, method: method,  parameters: paramters).responseJSON { (response) in
-
+        Alamofire.request(requestUrlString, method: method,  parameters: paramters).responseJSON { [unowned self] (response) in
             var rjresponse: RJResponse = RJResponse()
             switch response.result {
                 case .success(let json):
                     let swiftJson: JSON = JSON(json)
-                    rjresponse.message = swiftJson["message"].string
-                    rjresponse.response = swiftJson["result"]
-                    if let code = swiftJson["code"].int, code == self.successCode {
-                        rjresponse.code = .Success
+                    rjresponse.message = swiftJson[self.messageKey].string
+                    if let resKey = self.responseKey {
+                        rjresponse.response = swiftJson[resKey]
+                        if let code = swiftJson[self.codeKey].int, code == self.successCode {
+                            rjresponse.code = .Success
+                        } else {
+                            rjresponse.code = .Failed
+                        }
                     } else {
-                        rjresponse.code = .Failed
-                }
+                        rjresponse.code = .Success
+                        rjresponse.response = swiftJson
+                    }
                 case .failure(let error):
                     rjresponse.code = .Error
                     rjresponse.message = RJNetworking.KDEFAULT_ERRORMSG

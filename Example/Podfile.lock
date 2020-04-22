@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
-  - RJNetworking-Swift (0.1.0):
+  - RJNetworking-Swift (0.1.2):
     - Alamofire
     - SwiftyJSON
   - SwiftyJSON (5.0.0)
@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  RJNetworking-Swift: c552143a5c43582c8751f61bad7a4c8e83867517
+  RJNetworking-Swift: 74e470dcd362eb5ae146d1704e1b68c25030473b
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
 PODFILE CHECKSUM: 969e8afac619c994428c37560c63d3582181cdc5
