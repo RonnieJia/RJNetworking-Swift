@@ -30,6 +30,8 @@ public final class RJNetworking {
     
     public var kBaseUrl: String?
     
+    public var successCode: Int = 200
+    
     var reachAble: Bool = true
     
     public static let sharedInstance: RJNetworking = {
@@ -59,7 +61,7 @@ public final class RJNetworking {
         self.requestData(with: path, paramters: paramters, completion: completion)
     }
     
-    public func POSTRequest(with path: String, paramters: Parameters?, completion: @escaping (_ response: RJResponse?) -> Void) {
+    public func POSTRequest(with path: String, paramters: Parameters?, completion: @escaping (_ response: RJResponse) -> Void) {
         self.requestData(with: path, method: .post, paramters: paramters, completion: completion)
     }
     
@@ -81,7 +83,7 @@ public final class RJNetworking {
                     let swiftJson: JSON = JSON(json)
                     rjresponse.message = swiftJson["message"].string
                     rjresponse.response = swiftJson["result"]
-                    if let code = swiftJson["code"].int, code == 101 {
+                    if let code = swiftJson["code"].int, code == self.successCode {
                         rjresponse.code = .Success
                     } else {
                         rjresponse.code = .Failed
